@@ -51,7 +51,7 @@ async def obtener_candidatos(db: Session = Depends(get_db)):
     return candidatos
 
 
-@app.post("/votar", response_model=VotoResponse)
+@app.post("/votar/", response_model=VotoResponse)
 async def votar(voto: VotoCreate, db: Session = Depends(get_db)):
     voto_existente = db.query(Voto).filter(Voto.codigo == voto.codigo).first()
     if voto_existente:
