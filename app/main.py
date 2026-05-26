@@ -17,7 +17,7 @@ from .schemas import (
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
-    title="Sistema de Votación de la mascota de la facultad de Ingenieria",
+    title="Sistema de Votación para la mascota de la facultad de Ingenieria",
     description="API para gestionar votos y candidatos en un sistema de votación.",
     version="1.0.0",
 )
@@ -42,7 +42,7 @@ def get_db():
 
 @app.get("/")
 async def root():
-    return {"message": "Bienvenido al Sistema de Votación de la mascota de la facultad de Ingenieria"}
+    return {"message": "Bienvenido al Sistema de Votación para la mascota de la facultad de Ingenieria"}
 
 
 @app.get("/candidatos/", response_model=list[CandidatoResponse])
