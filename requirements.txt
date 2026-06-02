@@ -1,4 +1,7 @@
 sqlalchemy == 2.0.50
 pymysql == 1.2.0
 uvicorn == 0.48.0
-dotenv == 1.2.2
+fastapi
+pymysql
+python-dotenv
+pydantic
